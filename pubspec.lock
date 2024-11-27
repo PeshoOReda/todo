@@ -138,10 +138,10 @@ packages:
     dependency: "direct main"
     description:
       name: easy_date_timeline
-      sha256: "6a19722d98b508987f5fe0362f4065403909780a1481f052869aaebe37847b92"
+      sha256: c6103e6487e9bf04f991ea762eff14672c2c111e80a5a4b0e308540a202a62c2
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.3"
+    version: "2.0.4"
   fake_async:
     dependency: transitive
     description:
@@ -300,10 +300,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_svg
-      sha256: "936d9c1c010d3e234d1672574636f3352b4941ca3decaddd3cafaeb9ad49c471"
+      sha256: "54900a1a1243f3c4a5506d853a2b5c2dbc38d5f27e52a52618a8054401431123"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.15"
+    version: "2.0.16"
   flutter_test:
     dependency: "direct dev"
     description: flutter

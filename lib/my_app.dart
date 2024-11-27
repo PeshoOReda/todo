@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'config/theme/app_theme.dart';
 import 'core/utils/routes_manager.dart';
 import 'l10n/app_localizations.dart';
@@ -17,13 +18,13 @@ class MyApp extends StatelessWidget {
       child: Consumer<LocaleProvider>(
         builder: (context, provider, child) {
           return ScreenUtilInit(
-            designSize: const Size(412, 870),
+            designSize: const Size(400, 880),
             minTextAdapt: true,
             splitScreenMode: true,
             builder: (context, child) => MaterialApp(
               locale: provider.locale,
               onGenerateRoute: RoutesManager.router,
-              initialRoute: RoutesManager.home,
+              initialRoute: RoutesManager.login,
               theme: AppTheme.light,
               darkTheme: AppTheme.dark,
               themeMode: ThemeMode.light,

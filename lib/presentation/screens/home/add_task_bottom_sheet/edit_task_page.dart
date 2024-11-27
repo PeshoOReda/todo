@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import '../../../../../../database_manager/model/todo_dm.dart';
 import '../../../../../../database_manager/model/user_dm.dart';
 import '../../../../l10n/app_localizations.dart';
@@ -36,11 +37,13 @@ class EditTaskPageState extends State<EditTaskPage> {
           .doc(UserDM.currentUser!.id)
           .collection(TodoDM.collectionName);
       DocumentReference todoDoc = todoCollection.doc(widget.todo.id);
-      await todoDoc.update({
-        'title': _title,
-        'description': _description,
-        'dateTime': _selectedDate,
-      });
+      await todoDoc.update(
+        {
+          'title': _title,
+          'description': _description,
+          'dateTime': _selectedDate,
+        },
+      );
       if (mounted) {
         Navigator.pop(context);
       }
@@ -55,9 +58,11 @@ class EditTaskPageState extends State<EditTaskPage> {
       lastDate: DateTime(2100),
     );
     if (picked != null && picked != _selectedDate) {
-      setState(() {
-        _selectedDate = picked;
-      });
+      setState(
+        () {
+          _selectedDate = picked;
+        },
+      );
     }
   }
 
